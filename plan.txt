@@ -1,0 +1,23 @@
+REQUISITOS
+
+1)
+Tematica: restaurante
+- Incluir produto OK
+- Listar produtos OK
+- Consultar produto
+- Excluir produto
+- Alterar dados produto
+
+2) Inclusao de um registro por vez a partir do procedimento de inclusao
+O mesmo vale para alterar e excluir
+
+3) Minimo 4 classes
+
+--- FALTA:
+* Metodo para reconhecer o tipo de produto a ser adicionado para auxiliar a inclusao
+* Alimento como classe abstrata
+* Mostrar os tipos de alimento que podem ser adicionados
+* Criar classes tipo de alimento
+* Atributos de alimento: tipo de produto NAO E ATRIBUTO, quantidade (quilo/litro...) OK, valor de venda OK, quantidade do produto OK, codigo OK
+* Atributos especificos: teor alcoolico
+* Interface de usuario terminal (aprimorar)
