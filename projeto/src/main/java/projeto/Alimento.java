@@ -1,13 +1,12 @@
 package projeto;
 
-public abstract class Alimento {
+public class Alimento {
 	private String nomeDoAlimento;
 	private double preco;
 	private int quantidadeDoProduto;
-	private int codigo;
-	// especificas: quantidade (quilo/litro)
+	private String codigo;
 
-	public Alimento(String nomeDoAlimento, double preco, int quantidadeDoProduto, int codigo) {
+	public Alimento(String nomeDoAlimento, double preco, int quantidadeDoProduto, String codigo) {
 		this.nomeDoAlimento = nomeDoAlimento;
 		this.preco = preco;
 		this.quantidadeDoProduto = quantidadeDoProduto;
@@ -38,11 +37,11 @@ public abstract class Alimento {
 		this.quantidadeDoProduto = quantidadeDoProduto;
 	}
 
-	public int getCodigo() {
+	public String getCodigo() {
 		return codigo;
 	}
 
-	public void setCodigo(int codigo) {
+	public void setCodigo(String codigo) {
 		this.codigo = codigo;
 	}
 

@@ -1,6 +1,7 @@
 package projeto;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Restaurante {
 	private ArrayList<Alimento> listaDeAlimentos;
@@ -9,24 +10,91 @@ public class Restaurante {
 		this.listaDeAlimentos = new ArrayList<>();
 	}
 
-	/*
-	 * public void adicionarAlimento(Alimento alimento) {
-	 * listaDeAlimentos.add(alimento);
-	 * }
-	 */
-
-	public void adicionarBebida(Bebida bebida) {
-		listaDeAlimentos.add(bebida);
+	public void adicionarAlimento(Alimento alimento) {
+		listaDeAlimentos.add(alimento);
 	}
 
 	public void listarAlimentos() {
 		for (Alimento alimento : listaDeAlimentos) {
-			System.out.println(alimento);
+			System.out.println("Nome: " + alimento.getNomeDoAlimento());
+			System.out.println("Codigo: " + alimento.getCodigo());
+			System.out.println();
 		}
 	}
 
-	@Override
-	public String toString() {
-		return "Restaurante []";
+	public Alimento consultarAlimento(String nomeDoAlimento, String codigo) {
+		for (Alimento alimento : listaDeAlimentos) {
+			if (alimento.getNomeDoAlimento().equals(nomeDoAlimento)) {
+				return alimento;
+			}
+
+			if (alimento.getCodigo().equals(codigo)) {
+				return alimento;
+			}
+		}
+
+		System.out.println("Alimento nao encontrado.");
+		return null;
 	}
+
+	public void excluirAlimento(String nomeDoAlimento, String codigo) {
+		for (Alimento alimento : listaDeAlimentos) {
+
+			if (alimento.getNomeDoAlimento().equals(nomeDoAlimento)) {
+				listaDeAlimentos.remove(alimento);
+				System.out.println("Alimento excluido com sucesso: " + alimento.getNomeDoAlimento());
+				return;
+			}
+
+			if (alimento.getCodigo().equals(codigo)) {
+				listaDeAlimentos.remove(alimento);
+				System.out.println("Alimento excluido com sucesso: " + alimento.getNomeDoAlimento());
+				System.out.println();
+				return;
+			}
+		}
+
+		System.out.println("Alimento nao encontrado.");
+	}
+
+	public void alterarDadosAlimento(String nomeDoAlimento, String codigo, Scanner scanner) {
+		Alimento encontrado = this.consultarAlimento(nomeDoAlimento, codigo);
+		if (encontrado.equals(null)) {
+			System.out.println("Alimento nao encontrado.");
+			return;
+		}
+
+		System.out.println("Digite o dado a ser alterado: ");
+		System.out.println("1 - preco");
+		System.out.println("2 - quantidade");
+		System.out.println("3 - codigo");
+
+		int entrada = Integer.valueOf(scanner.nextLine());
+
+		switch (entrada) {
+
+			case 1:
+				System.out.println("Digite o novo preco: ");
+				double preco = Double.valueOf(scanner.nextLine());
+				encontrado.setPreco(preco);
+				break;
+
+			case 2:
+				System.out.println("Digite a nova quantidade: ");
+				int quantidade = Integer.valueOf(scanner.nextLine());
+				encontrado.setQuantidadeDoProduto(quantidade);
+				break;
+
+			case 3:
+				System.out.println("Digite o novo codigo: ");
+				String codigoDoProduto = scanner.nextLine();
+				encontrado.setCodigo(codigoDoProduto);
+				break;
+
+			default:
+				break;
+		}
+
+	}
+
 }
