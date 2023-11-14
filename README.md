@@ -22,6 +22,6 @@
 # 10 pontos:
 - [ ] Uso de interface gráfica (Nota Máxima = 10,0)
 
-# Opcional:
+# Para depois:
 * Validacoes: produto ja cadastrado; produto nao encontrado
 * Validacao: nome maiusculo/minusculo
