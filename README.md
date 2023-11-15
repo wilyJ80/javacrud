@@ -16,8 +16,13 @@
 # 9 pontos:
 - [ ] Uso funcional de Polimorfismo no sistema e na modelagem de classes. (Nota Máxima = 9,0)
 ### Ideias de atributos especificos:
-- Teor alcoolico
-- Contem gluten
+- Bebida:
+  - Teor Alcoolico
+- Solido:
+  - Porcao
+  - Temperatura
+- Sobremesa:
+  - Teor de Acucar
 
 # 10 pontos:
 - [ ] Uso de interface gráfica (Nota Máxima = 10,0)
