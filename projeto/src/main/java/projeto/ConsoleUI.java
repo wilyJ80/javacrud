@@ -25,6 +25,11 @@ public class ConsoleUI {
 			switch (opcao) {
 				case 1:
 
+					System.out.println("Digite o tipo de alimento a adicionar:");
+					System.out.println("1 - Bebida");
+					int tipoDeAlimento = Integer.valueOf(scanner.nextLine());
+					System.out.println();
+
 					System.out.println("Insira o nome do alimento a adicionar: ");
 					String nomeDoAlimento = scanner.nextLine();
 
@@ -37,10 +42,16 @@ public class ConsoleUI {
 					System.out.println("Digite o codigo do alimento: ");
 					String codigoDoAlimento = scanner.nextLine();
 
-					Alimento alimento = new Alimento(nomeDoAlimento, precoDoAlimento, quantidadeDoAlimento,
-							codigoDoAlimento);
-					restaurante.adicionarAlimento(alimento);
-					System.out.println();
+					if (tipoDeAlimento == 1) {
+
+						System.out.println("Digite o teor alcoolico:");
+						double teorAlcoolico = Double.valueOf(scanner.nextLine());
+
+						Bebida bebida = new Bebida(nomeDoAlimento, precoDoAlimento, quantidadeDoAlimento,
+								codigoDoAlimento, teorAlcoolico);
+						restaurante.adicionarAlimento(bebida);
+						System.out.println();
+					}
 
 					break;
 
@@ -48,6 +59,7 @@ public class ConsoleUI {
 
 					System.out.println("Alimentos:");
 					restaurante.listarAlimentos();
+					System.out.println();
 					break;
 
 				case 3:
