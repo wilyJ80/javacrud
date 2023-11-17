@@ -9,12 +9,13 @@
 - Imprimir em tela lista de “produtos”.
 - Na inclusão de um novo “produto”, o sistema deve permitir a inclusão de um registro por vez. A inclusão dos registros não deve desenvolvida como um laço de repetição contínuo, mas sim conforme a escolha da função “Incluir” por parte do usuário. O mesmo raciocínio se aplica para as funções de alterar e excluir.
 - O cenário escolhido pela equipe deve contemplar uma modelagem de no mínimo 4 classes. 
+    - Obs: atualizar a funcionalidade "alterar produto"
 
 # 8 pontos:
-- [ ] Uso funcional de Herança no sistema e na modelagem de classes. (Nota Máxima = 8,0)
+- [X] Uso funcional de Herança no sistema e na modelagem de classes. (Nota Máxima = 8,0)
 
 # 9 pontos:
-- [ ] Uso funcional de Polimorfismo no sistema e na modelagem de classes. (Nota Máxima = 9,0)
+- [X] Uso funcional de Polimorfismo no sistema e na modelagem de classes. (Nota Máxima = 9,0)
 ### Ideias de atributos especificos:
 - Bebida:
   - Teor Alcoolico
