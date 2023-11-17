@@ -25,6 +25,14 @@ public class ConsoleUI {
 			switch (opcao) {
 				case 1:
 
+					System.out.println("Digite o tipo de alimento a adicionar:");
+					System.out.println("1 - Bebida");
+					System.out.println("2 - Sobremesa");
+					System.out.println("3 - Solido");
+
+					int tipoDeAlimento = Integer.valueOf(scanner.nextLine());
+					System.out.println();
+
 					System.out.println("Insira o nome do alimento a adicionar: ");
 					String nomeDoAlimento = scanner.nextLine();
 
@@ -37,10 +45,40 @@ public class ConsoleUI {
 					System.out.println("Digite o codigo do alimento: ");
 					String codigoDoAlimento = scanner.nextLine();
 
-					Alimento alimento = new Alimento(nomeDoAlimento, precoDoAlimento, quantidadeDoAlimento,
-							codigoDoAlimento);
-					restaurante.adicionarAlimento(alimento);
-					System.out.println();
+					if (tipoDeAlimento == 1) {
+
+						System.out.println("Digite o teor alcoolico:");
+						double teorAlcoolico = Double.valueOf(scanner.nextLine());
+
+						Bebida bebida = new Bebida(nomeDoAlimento, precoDoAlimento, quantidadeDoAlimento,
+								codigoDoAlimento, teorAlcoolico);
+						restaurante.adicionarAlimento(bebida);
+						System.out.println();
+					}
+
+					else if (tipoDeAlimento == 2) {
+
+						System.out.println("Digite o teor de acucar:");
+						double teorDeAcucar = Double.valueOf(scanner.nextLine());
+
+						Sobremesa sobremesa = new Sobremesa(nomeDoAlimento, precoDoAlimento, quantidadeDoAlimento,
+								codigoDoAlimento, teorDeAcucar);
+						restaurante.adicionarAlimento(sobremesa);
+						System.out.println();
+					}
+
+					else if (tipoDeAlimento == 3) {
+
+						System.out.println("Digite a porcao: ");
+						double porcao = Double.valueOf(scanner.nextLine());
+						System.out.println("Digite a temperatura: ");
+						double temperatura = Double.valueOf(scanner.nextLine());
+						
+						Solido solido = new Solido(nomeDoAlimento, precoDoAlimento, quantidadeDoAlimento,
+								codigoDoAlimento, porcao, temperatura);
+						restaurante.adicionarAlimento(solido);
+						System.out.println();
+					}
 
 					break;
 
@@ -48,6 +86,7 @@ public class ConsoleUI {
 
 					System.out.println("Alimentos:");
 					restaurante.listarAlimentos();
+					System.out.println();
 					break;
 
 				case 3:
@@ -62,6 +101,7 @@ public class ConsoleUI {
 						String nome = scanner.nextLine();
 						Alimento encontrado = restaurante.consultarAlimento(nome, null);
 						System.out.println(encontrado);
+						System.out.println();
 						break;
 					}
 
@@ -70,11 +110,13 @@ public class ConsoleUI {
 						String codigo = scanner.nextLine();
 						Alimento encontrado = restaurante.consultarAlimento(null, codigo);
 						System.out.println(encontrado);
+						System.out.println();
 						break;
 					}
 
 					else {
 						System.out.println("Opcao Invalida.");
+						System.out.println();
 						break;
 					}
 

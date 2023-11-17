@@ -1,6 +1,6 @@
 package projeto;
 
-public class Alimento {
+public abstract class Alimento {
 	private String nomeDoAlimento;
 	private double preco;
 	private int quantidadeDoProduto;
