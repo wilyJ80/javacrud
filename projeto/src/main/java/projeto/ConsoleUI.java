@@ -27,6 +27,7 @@ public class ConsoleUI {
 
 					System.out.println("Digite o tipo de alimento a adicionar:");
 					System.out.println("1 - Bebida");
+					System.out.println("2 - Sobremesa");
 					int tipoDeAlimento = Integer.valueOf(scanner.nextLine());
 					System.out.println();
 
@@ -50,6 +51,17 @@ public class ConsoleUI {
 						Bebida bebida = new Bebida(nomeDoAlimento, precoDoAlimento, quantidadeDoAlimento,
 								codigoDoAlimento, teorAlcoolico);
 						restaurante.adicionarAlimento(bebida);
+						System.out.println();
+					}
+
+					else if (tipoDeAlimento == 2) {
+
+						System.out.println("Digite o teor de acucar:");
+						double teorDeAcucar = Double.valueOf(scanner.nextLine());
+
+						Sobremesa sobremesa = new Sobremesa(nomeDoAlimento, precoDoAlimento, quantidadeDoAlimento,
+								codigoDoAlimento, teorDeAcucar);
+						restaurante.adicionarAlimento(sobremesa);
 						System.out.println();
 					}
 
