@@ -5,11 +5,11 @@
 - Incluir novo “produto”
 - Consultar um “produto”
 - Alterar dados de um “produto”
+    - [ ] Deve funcionar para todos os atributos
 - Excluir dados de um “produto”
 - Imprimir em tela lista de “produtos”.
 - Na inclusão de um novo “produto”, o sistema deve permitir a inclusão de um registro por vez. A inclusão dos registros não deve desenvolvida como um laço de repetição contínuo, mas sim conforme a escolha da função “Incluir” por parte do usuário. O mesmo raciocínio se aplica para as funções de alterar e excluir.
 - O cenário escolhido pela equipe deve contemplar uma modelagem de no mínimo 4 classes. 
-    - Obs: atualizar a funcionalidade "alterar produto"
 
 # 8 pontos:
 - [X] Uso funcional de Herança no sistema e na modelagem de classes. (Nota Máxima = 8,0)
