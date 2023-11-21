@@ -16,6 +16,8 @@
 
 # 9 pontos:
 - [X] Uso funcional de Polimorfismo no sistema e na modelagem de classes. (Nota Máxima = 9,0)
+    - Precisa adicionar mais um metodo polimorfico, esta pouco
+      
 ### Tema: Restaurante
 ### Ideias de atributos especificos:
 - Bebida:
@@ -30,5 +32,4 @@
 - [ ] Uso de interface gráfica (Nota Máxima = 10,0)
 
 # Para depois:
-* Validacoes: produto ja cadastrado; produto nao encontrado
-* Validacao: nome maiusculo/minusculo
+* Validacoes: produto ja cadastrado;
