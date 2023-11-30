@@ -18,7 +18,16 @@ public class Bebida extends Alimento {
 
 	@Override
 	public String toString() {
-		return super.toString() + ", [teorAlcoolico=" + teorAlcoolico + "]";
+		return super.toString() + ", [teorAlcoolico=" + teorAlcoolico + "], [imposto=" + this.calcularImposto();
 	}
 
+	@Override
+	public String getTipo() {
+		return "Bebida";
+	}
+
+	@Override
+	public double calcularImposto() {
+		return 0.25 * this.getPreco();
+	}
 }

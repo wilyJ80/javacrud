@@ -28,8 +28,17 @@ public class Solido extends Alimento {
 
 	@Override
 	public String toString() {
-		return super.toString() + ", [porcao=" + porcao + ", temperatura=" + temperatura + "]";
+		return super.toString() + ", [porcao=" + porcao + ", temperatura=" + temperatura + "], [Imposto=" + this.calcularImposto();
 	}
 
+	@Override
+	public String getTipo() {
+		return "Bebida";
+	}
+
+	@Override
+	public double calcularImposto() {
+		return 0.3 * this.getPreco();
+	}
 }
 

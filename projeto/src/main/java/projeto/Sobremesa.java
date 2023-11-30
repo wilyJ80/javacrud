@@ -18,7 +18,17 @@ public class Sobremesa extends Alimento {
 
 	@Override
 	public String toString() {
-		return super.toString() + ", [teorDeAcucar=" + teorDeAcucar + "]";
+		return super.toString() + ", [teorDeAcucar=" + teorDeAcucar + "], [Imposto=" + this.calcularImposto();
+	}
+
+	@Override
+	public String getTipo() {
+		return "Sobremesa";
+	}
+
+	@Override
+	public double calcularImposto() {
+		return 0.6 * this.getPreco();
 	}
 
 }

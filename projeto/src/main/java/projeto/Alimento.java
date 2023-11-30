@@ -1,6 +1,6 @@
 package projeto;
 
-public abstract class Alimento {
+public abstract class Alimento implements TipoDeAlimento {
 	private String nomeDoAlimento;
 	private double preco;
 	private int quantidadeDoProduto;
@@ -43,6 +43,16 @@ public abstract class Alimento {
 
 	public void setCodigo(String codigo) {
 		this.codigo = codigo;
+	}
+
+	@Override
+	public String getTipo() {
+		return "Alimento";
+	}
+
+	@Override
+	public double calcularImposto() {
+		return 0.05 * preco;
 	}
 
 	@Override

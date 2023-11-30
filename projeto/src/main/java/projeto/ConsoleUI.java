@@ -45,14 +45,16 @@ public class ConsoleUI {
 					System.out.println("Digite o codigo do alimento: ");
 					String codigoDoAlimento = scanner.nextLine();
 
+					Alimento alimento = null;
+
 					if (tipoDeAlimento == 1) {
 
 						System.out.println("Digite o teor alcoolico:");
 						double teorAlcoolico = Double.valueOf(scanner.nextLine());
 
-						Bebida bebida = new Bebida(nomeDoAlimento, precoDoAlimento, quantidadeDoAlimento,
+						alimento = new Bebida(nomeDoAlimento, precoDoAlimento, quantidadeDoAlimento,
 								codigoDoAlimento, teorAlcoolico);
-						restaurante.adicionarAlimento(bebida);
+						restaurante.adicionarAlimento(alimento);
 						System.out.println();
 					}
 
@@ -61,9 +63,9 @@ public class ConsoleUI {
 						System.out.println("Digite o teor de acucar:");
 						double teorDeAcucar = Double.valueOf(scanner.nextLine());
 
-						Sobremesa sobremesa = new Sobremesa(nomeDoAlimento, precoDoAlimento, quantidadeDoAlimento,
+						alimento = new Sobremesa(nomeDoAlimento, precoDoAlimento, quantidadeDoAlimento,
 								codigoDoAlimento, teorDeAcucar);
-						restaurante.adicionarAlimento(sobremesa);
+						restaurante.adicionarAlimento(alimento);
 						System.out.println();
 					}
 
@@ -74,9 +76,9 @@ public class ConsoleUI {
 						System.out.println("Digite a temperatura: ");
 						double temperatura = Double.valueOf(scanner.nextLine());
 						
-						Solido solido = new Solido(nomeDoAlimento, precoDoAlimento, quantidadeDoAlimento,
+						alimento = new Solido(nomeDoAlimento, precoDoAlimento, quantidadeDoAlimento,
 								codigoDoAlimento, porcao, temperatura);
-						restaurante.adicionarAlimento(solido);
+						restaurante.adicionarAlimento(alimento);
 						System.out.println();
 					}
 

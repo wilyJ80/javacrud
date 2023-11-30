@@ -17,7 +17,10 @@ public class Restaurante {
 	public void listarAlimentos() {
 		for (Alimento alimento : listaDeAlimentos) {
 			System.out.println("Nome: " + alimento.getNomeDoAlimento());
+			System.out.println("Tipo: " + alimento.getTipo());
 			System.out.println("Codigo: " + alimento.getCodigo());
+			System.out.println("Preco: " + alimento.getPreco()); 
+			System.out.println("Taxa: " + alimento.calcularImposto());
 			System.out.println();
 		}
 	}
