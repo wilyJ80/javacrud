@@ -16,7 +16,7 @@
 
 # 9 pontos:
 - [X] Uso funcional de Polimorfismo no sistema e na modelagem de classes. (Nota Máxima = 9,0)
-- [ ]  Precisa adicionar mais um metodo polimorfico, esta pouco
+- [X]  Precisa adicionar mais um metodo polimorfico, esta pouco
       
 ### Tema: Restaurante
 ### Ideias de atributos especificos:
