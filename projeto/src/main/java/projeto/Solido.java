@@ -33,7 +33,7 @@ public class Solido extends Alimento {
 
 	@Override
 	public String getTipo() {
-		return "Bebida";
+		return "Solido";
 	}
 
 	@Override
