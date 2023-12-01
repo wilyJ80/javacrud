@@ -19,7 +19,7 @@ public class Restaurante {
 			System.out.println("Nome: " + alimento.getNomeDoAlimento());
 			System.out.println("Tipo: " + alimento.getTipo());
 			System.out.println("Codigo: " + alimento.getCodigo());
-			System.out.println("Preco: " + alimento.getPreco()); 
+			System.out.println("Preco: " + alimento.getPreco());
 			System.out.println("Taxa: " + alimento.calcularImposto());
 			System.out.println();
 		}
@@ -36,8 +36,9 @@ public class Restaurante {
 			}
 		}
 
+		Solido naoEncontrado = new Solido("naoEncontrado", 1, 1, "1", 1, 1);
 		System.out.println("Alimento nao encontrado.");
-		return null;
+		return naoEncontrado;
 	}
 
 	public void excluirAlimento(String nomeDoAlimento, String codigo) {
@@ -62,7 +63,7 @@ public class Restaurante {
 
 	public void alterarDadosAlimento(String nomeDoAlimento, String codigo, Scanner scanner) {
 		Alimento encontrado = this.consultarAlimento(nomeDoAlimento, codigo);
-		if (encontrado.equals(null)) {
+		if (encontrado.getNomeDoAlimento().equals("naoEncontrado")) {
 			System.out.println("Alimento nao encontrado.");
 			return;
 		}
@@ -101,7 +102,6 @@ public class Restaurante {
 			default:
 				break;
 		}
-
 
 	}
 

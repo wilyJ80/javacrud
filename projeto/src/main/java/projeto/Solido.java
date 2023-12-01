@@ -6,7 +6,8 @@ public class Solido extends Alimento {
 	private double porcao;
 	private double temperatura;
 
-	public Solido(String nomeDoAlimento, double preco, int quantidadeDoProduto, String codigo, double porcao, double temperatura) {
+	public Solido(String nomeDoAlimento, double preco, int quantidadeDoProduto, String codigo, double porcao,
+			double temperatura) {
 		super(nomeDoAlimento, preco, quantidadeDoProduto, codigo);
 		this.porcao = porcao;
 		this.temperatura = temperatura;
@@ -30,7 +31,8 @@ public class Solido extends Alimento {
 
 	@Override
 	public String toString() {
-		return super.toString() + ", [porcao=" + porcao + ", temperatura=" + temperatura + "], [Imposto=" + this.calcularImposto();
+		return super.toString() + ", [porcao=" + porcao + ", temperatura=" + temperatura + "], [Imposto="
+				+ this.calcularImposto() + "]";
 	}
 
 	@Override
@@ -49,20 +51,16 @@ public class Solido extends Alimento {
 		String escolha = scanner.nextLine();
 		if (escolha.equals("n")) {
 			return;
-		}
-		else if (escolha.equals("p")) {
+		} else if (escolha.equals("p")) {
 
+			System.out.println("Digite a nova porcao: ");
+			double novaPorcao = Double.valueOf(scanner.nextLine());
+			this.setPorcao(novaPorcao);
+		} else if (escolha.equals("t")) {
 
-		System.out.println("Digite a nova porcao: ");
-		double novaPorcao = Double.valueOf(scanner.nextLine());
-		this.setPorcao(novaPorcao);
-		}
-		else if (escolha.equals("t")) {
-
-		System.out.println("Digite a nova temperatura: ");
-		double novaTemperatura = Double.valueOf(scanner.nextLine());
-		this.setTemperatura(novaTemperatura);
+			System.out.println("Digite a nova temperatura: ");
+			double novaTemperatura = Double.valueOf(scanner.nextLine());
+			this.setTemperatura(novaTemperatura);
 		}
 	}
 }
-

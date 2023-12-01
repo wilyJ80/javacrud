@@ -20,7 +20,7 @@ public class Sobremesa extends Alimento {
 
 	@Override
 	public String toString() {
-		return super.toString() + ", [teorDeAcucar=" + teorDeAcucar + "], [Imposto=" + this.calcularImposto();
+		return super.toString() + ", [teorDeAcucar=" + teorDeAcucar + "], [Imposto=" + this.calcularImposto() + "]";
 	}
 
 	@Override
@@ -32,6 +32,7 @@ public class Sobremesa extends Alimento {
 	public double calcularImposto() {
 		return 0.6 * this.getPreco();
 	}
+
 	@Override
 	public void alterarAtributosEspecificos(Scanner scanner) {
 		System.out.println("Deseja alterar o teor de acucar? s/n");
@@ -45,4 +46,3 @@ public class Sobremesa extends Alimento {
 		this.setTeorDeAcucar(novoTeorDeAcucar);
 	}
 }
-

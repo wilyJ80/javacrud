@@ -37,7 +37,7 @@ public class ConsoleUI {
 					String nomeDoAlimento = scanner.nextLine();
 
 					System.out.println("Insira o preco do alimento: ");
-					
+
 					double precoDoAlimento = Double.valueOf(scanner.nextLine());
 
 					System.out.println("Digite a quantidade do alimento: ");
@@ -76,7 +76,7 @@ public class ConsoleUI {
 						double porcao = Double.valueOf(scanner.nextLine());
 						System.out.println("Digite a temperatura: ");
 						double temperatura = Double.valueOf(scanner.nextLine());
-						
+
 						alimento = new Solido(nomeDoAlimento, precoDoAlimento, quantidadeDoAlimento,
 								codigoDoAlimento, porcao, temperatura);
 						restaurante.adicionarAlimento(alimento);
@@ -104,7 +104,9 @@ public class ConsoleUI {
 						String nome = scanner.nextLine();
 						Alimento encontrado = restaurante.consultarAlimento(nome, null);
 
-												System.out.println(encontrado);
+						if (!encontrado.getNomeDoAlimento().equals("naoEncontrado")) {
+							System.out.println(encontrado);
+						}
 						System.out.println();
 						break;
 					}
@@ -113,7 +115,11 @@ public class ConsoleUI {
 						System.out.println("Digite o codigo do alimento: ");
 						String codigo = scanner.nextLine();
 						Alimento encontrado = restaurante.consultarAlimento(null, codigo);
-						System.out.println(encontrado);
+
+						if (!encontrado.getNomeDoAlimento().equals("naoEncontrado")) {
+							System.out.println(encontrado);
+						}
+
 						System.out.println();
 						break;
 					}
