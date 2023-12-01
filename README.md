@@ -7,7 +7,7 @@
     - [X] Alimento não encontrado está dando erro
 - Alterar dados de um “produto”
     - [X] Deve funcionar para todos os atributos
-    - [ ] Está trazendo mensagem repetida
+    - [X] Está trazendo mensagem repetida
 - Excluir dados de um “produto”
 - Imprimir em tela lista de “produtos”.
 - Na inclusão de um novo “produto”, o sistema deve permitir a inclusão de um registro por vez. A inclusão dos registros não deve desenvolvida como um laço de repetição contínuo, mas sim conforme a escolha da função “Incluir” por parte do usuário. O mesmo raciocínio se aplica para as funções de alterar e excluir.
@@ -34,4 +34,4 @@
 - [ ] Uso de interface gráfica (Nota Máxima = 10,0)
 
 # Logica:
-- [ ] Validacoes: produto ja cadastrado: deseja incrementar quantidade?
+- [X] Validacoes: produto ja cadastrado: deseja incrementar quantidade?
