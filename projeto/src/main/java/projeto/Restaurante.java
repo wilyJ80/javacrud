@@ -71,6 +71,7 @@ public class Restaurante {
 		System.out.println("1 - preco");
 		System.out.println("2 - quantidade");
 		System.out.println("3 - codigo");
+		System.out.println("4 - atributos especificos");
 
 		int entrada = Integer.valueOf(scanner.nextLine());
 
@@ -94,9 +95,13 @@ public class Restaurante {
 				encontrado.setCodigo(codigoDoProduto);
 				break;
 
+			case 4:
+				encontrado.alterarAtributosEspecificos(scanner);
+
 			default:
 				break;
 		}
+
 
 	}
 

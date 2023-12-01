@@ -1,5 +1,7 @@
 package projeto;
 
+import java.util.Scanner;
+
 public class Sobremesa extends Alimento {
 	private double teorDeAcucar;
 
@@ -30,6 +32,17 @@ public class Sobremesa extends Alimento {
 	public double calcularImposto() {
 		return 0.6 * this.getPreco();
 	}
+	@Override
+	public void alterarAtributosEspecificos(Scanner scanner) {
+		System.out.println("Deseja alterar o teor de acucar? s/n");
+		String escolha = scanner.nextLine();
+		if (escolha.equals("n")) {
+			return;
+		}
 
+		System.out.println("Digite o novo teor de acucar:");
+		double novoTeorDeAcucar = Double.valueOf(scanner.nextLine());
+		this.setTeorDeAcucar(novoTeorDeAcucar);
+	}
 }
 

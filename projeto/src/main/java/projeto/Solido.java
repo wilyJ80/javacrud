@@ -1,5 +1,7 @@
 package projeto;
 
+import java.util.Scanner;
+
 public class Solido extends Alimento {
 	private double porcao;
 	private double temperatura;
@@ -39,6 +41,28 @@ public class Solido extends Alimento {
 	@Override
 	public double calcularImposto() {
 		return 0.3 * this.getPreco();
+	}
+
+	@Override
+	public void alterarAtributosEspecificos(Scanner scanner) {
+		System.out.println("Deseja alterar a porcao, temperatura, ou nada? p/t/n");
+		String escolha = scanner.nextLine();
+		if (escolha.equals("n")) {
+			return;
+		}
+		else if (escolha.equals("p")) {
+
+
+		System.out.println("Digite a nova porcao: ");
+		double novaPorcao = Double.valueOf(scanner.nextLine());
+		this.setPorcao(novaPorcao);
+		}
+		else if (escolha.equals("t")) {
+
+		System.out.println("Digite a nova temperatura: ");
+		double novaTemperatura = Double.valueOf(scanner.nextLine());
+		this.setTemperatura(novaTemperatura);
+		}
 	}
 }
 

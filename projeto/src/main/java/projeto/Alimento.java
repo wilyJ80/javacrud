@@ -1,5 +1,7 @@
 package projeto;
 
+import java.util.Scanner;
+
 public abstract class Alimento implements TipoDeAlimento {
 	private String nomeDoAlimento;
 	private double preco;
@@ -61,4 +63,5 @@ public abstract class Alimento implements TipoDeAlimento {
 				+ quantidadeDoProduto + ", codigo=" + codigo + "]";
 	}
 
+	public abstract void alterarAtributosEspecificos(Scanner scanner);
 }
