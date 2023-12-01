@@ -37,6 +37,7 @@ public class ConsoleUI {
 					String nomeDoAlimento = scanner.nextLine();
 
 					System.out.println("Insira o preco do alimento: ");
+					
 					double precoDoAlimento = Double.valueOf(scanner.nextLine());
 
 					System.out.println("Digite a quantidade do alimento: ");
@@ -102,7 +103,8 @@ public class ConsoleUI {
 						System.out.println("Digite o nome do alimento: ");
 						String nome = scanner.nextLine();
 						Alimento encontrado = restaurante.consultarAlimento(nome, null);
-						System.out.println(encontrado);
+
+												System.out.println(encontrado);
 						System.out.println();
 						break;
 					}
