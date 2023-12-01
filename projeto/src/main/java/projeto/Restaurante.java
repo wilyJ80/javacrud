@@ -10,8 +10,22 @@ public class Restaurante {
 		this.listaDeAlimentos = new ArrayList<>();
 	}
 
-	public void adicionarAlimento(Alimento alimento) {
-		listaDeAlimentos.add(alimento);
+	public void adicionarAlimento(Alimento novoAlimento) {
+
+		for (Alimento alimento : listaDeAlimentos) {
+			if (alimento.getNomeDoAlimento().equals(novoAlimento.getNomeDoAlimento())
+					|| alimento.getCodigo().equals(novoAlimento.getCodigo())) {
+
+				alimento.setQuantidadeDoProduto(
+						alimento.getQuantidadeDoProduto() + novoAlimento.getQuantidadeDoProduto());
+				System.out.println("Quantidade do produto incrementada: " + alimento.getNomeDoAlimento());
+				return;
+			}
+		}
+
+		// Adiciona o novo alimento à lista se não existir
+		listaDeAlimentos.add(novoAlimento);
+		System.out.println("Alimento adicionado com sucesso: " + novoAlimento.getNomeDoAlimento());
 	}
 
 	public void listarAlimentos() {
