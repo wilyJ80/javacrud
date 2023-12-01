@@ -64,7 +64,6 @@ public class Restaurante {
 	public void alterarDadosAlimento(String nomeDoAlimento, String codigo, Scanner scanner) {
 		Alimento encontrado = this.consultarAlimento(nomeDoAlimento, codigo);
 		if (encontrado.getNomeDoAlimento().equals("naoEncontrado")) {
-			System.out.println("Alimento nao encontrado.");
 			return;
 		}
 
