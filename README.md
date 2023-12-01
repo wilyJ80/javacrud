@@ -33,4 +33,4 @@
 - [ ] Uso de interface gráfica (Nota Máxima = 10,0)
 
 # Logica:
-* Validacoes: produto ja cadastrado: deseja incrementar quantidade?
+- [ ] Validacoes: produto ja cadastrado: deseja incrementar quantidade?
