@@ -10,6 +10,7 @@ public class ConsoleUI {
 		Scanner scanner = new Scanner(System.in);
 
 		while (true) {
+			System.out.println();
 			System.out.println("Digite a opcao: ");
 			System.out.println("1 - adicionar alimento");
 			System.out.println("2 - listar alimentos");
