@@ -27,16 +27,16 @@ public class Bebida extends Menu {
         System.out.println("Código: " + getCodigo());
         System.out.println("Nome: " + getNome());
         System.out.println("Descrição: " + getDescricao());
-        System.out.println("Preço: " + getPreco());
+        System.out.println("Preço: " + calcularImposto());
         System.out.println("Alcoólica: " + (alcoolica ? "Sim" : "Não"));
     }
     
     @Override
     public double calcularImposto() {
         if (alcoolica) {
-            return getPreco() * 0.15; // Imposto de 15% para bebidas alcoólicas
+            return (this.getPreco() + (0.15 * this.getPreco())); 
         } else {
-            return 0.0; // Sem imposto para bebidas não alcoólicas
+            return this.getPreco(); 
         }
     }
 
