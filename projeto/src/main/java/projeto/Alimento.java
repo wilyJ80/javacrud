@@ -24,7 +24,7 @@ public abstract class Alimento implements TipoDeAlimento {
 	}
 
 	public double getPreco() {
-		return preco;
+		return this.preco;
 	}
 
 	public void setPreco(double preco) {
@@ -54,7 +54,7 @@ public abstract class Alimento implements TipoDeAlimento {
 
 	@Override
 	public double calcularImposto() {
-		return 0.05 * preco;
+		return this.getPreco() + (0.05 * preco);
 	}
 
 	@Override

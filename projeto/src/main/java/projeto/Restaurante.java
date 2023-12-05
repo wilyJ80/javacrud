@@ -34,7 +34,7 @@ public class Restaurante {
 			System.out.println("Tipo: " + alimento.getTipo());
 			System.out.println("Codigo: " + alimento.getCodigo());
 			System.out.println("Preco: " + alimento.getPreco());
-			System.out.println("Taxa: " + alimento.calcularImposto());
+			System.out.println("Com Taxa: " + alimento.calcularImposto());
 			System.out.println();
 		}
 	}

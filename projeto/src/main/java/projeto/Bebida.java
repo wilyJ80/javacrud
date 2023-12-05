@@ -30,7 +30,7 @@ public class Bebida extends Alimento {
 
 	@Override
 	public double calcularImposto() {
-		return 0.25 * this.getPreco();
+		return this.getPreco() + (0.25 * this.getPreco());
 	}
 
 	@Override

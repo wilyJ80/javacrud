@@ -30,7 +30,7 @@ public class Sobremesa extends Alimento {
 
 	@Override
 	public double calcularImposto() {
-		return 0.6 * this.getPreco();
+		return this.getPreco() + (0.6 * this.getPreco());
 	}
 
 	@Override
