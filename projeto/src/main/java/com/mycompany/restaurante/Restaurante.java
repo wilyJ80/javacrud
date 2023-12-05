@@ -62,7 +62,7 @@ public class Restaurante {
     System.out.println("2 - Bebida");
     System.out.println("3 - Sobremesa");
     int tipo = scanner.nextInt();
-    scanner.nextLine(); // Limpar o buffer
+    scanner.nextLine(); 
 
     switch (tipo) {
         case 1:

@@ -24,16 +24,16 @@ public class Prato extends Menu {
         System.out.println("Código: " + getCodigo());
         System.out.println("Nome: " + getNome());
         System.out.println("Descrição: " + getDescricao());
-        System.out.println("Preço: " + getPreco());
+        System.out.println("Preço: " + calcularImposto());
         System.out.println("Tipo de Cozinha: " + getTipoCozinha());
     }
     
     @Override
     public double calcularImposto() {
         if (tipoCozinha.equalsIgnoreCase("Outros")) {
-            return getPreco() * 0.1; // Imposto de 10% para tipo de cozinha outros
+            return (this.getPreco() + (0.10 * this.getPreco())); 
         } else {
-            return 0.0; // Sem imposto para tipo de cozinha brasileira
+            return this.getPreco(); 
         }
     }
 

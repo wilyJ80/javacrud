@@ -30,7 +30,7 @@ public class Sobremesa extends Menu {
         System.out.println("Código: " + getCodigo());
         System.out.println("Nome: " + getNome());
         System.out.println("Descrição: " + getDescricao());
-        System.out.println("Preço: " + getPreco());
+        System.out.println("Preço: " + calcularImposto());
         System.out.println("Gourmet: " + (isGourmet ? "Sim" : "Não"));
         System.out.println("Imposto: " + (isGourmet ? "5%" : "0%"));
     }
@@ -38,9 +38,9 @@ public class Sobremesa extends Menu {
     @Override
     public double calcularImposto() {
         if (isGourmet) {
-            return getPreco() * 0.05; // Imposto de 5% para sobremesas gourmet
+            return (this.getPreco() + (0.05 * this.getPreco())); 
         } else {
-            return 0.0; // Sem imposto para sobremesas não gourmet
+            return this.getPreco();
         }
     }
 
