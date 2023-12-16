@@ -1,6 +1,6 @@
 # javacrud basico
 
-# 7 pontos: OK
+# Parte 1: OK
 ### Criação de um menu para escolha das funções por parte do usuário, conforme o exemplo abaixo. (Exemplo de uma interface com o usuário no Console).
 - Incluir novo “produto”
 - Consultar um “produto”
@@ -13,10 +13,10 @@
 - Na inclusão de um novo “produto”, o sistema deve permitir a inclusão de um registro por vez. A inclusão dos registros não deve desenvolvida como um laço de repetição contínuo, mas sim conforme a escolha da função “Incluir” por parte do usuário. O mesmo raciocínio se aplica para as funções de alterar e excluir.
 - O cenário escolhido pela equipe deve contemplar uma modelagem de no mínimo 4 classes. 
 
-# 8 pontos:
+# Parte 2:
 - [X] Uso funcional de Herança no sistema e na modelagem de classes. (Nota Máxima = 8,0)
 
-# 9 pontos:
+# Parte 3:
 - [X] Uso funcional de Polimorfismo no sistema e na modelagem de classes. (Nota Máxima = 9,0)
 - [X]  Precisa adicionar mais um metodo polimorfico, esta pouco
       
@@ -30,7 +30,7 @@
 - Sobremesa:
   - Teor de Acucar
 
-# 10 pontos:
+# Parte final:
 - [ ] Uso de interface gráfica (Nota Máxima = 10,0)
 
 # Logica:
